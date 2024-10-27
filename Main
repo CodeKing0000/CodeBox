@@ -1,8 +1,15 @@
 import telebot
 
-TOKEN = '7570041216:AAEjllhAk-aOIXO7AE0kugI2MMbAnCrPi4Q'
+TOKEN = ''
 
 bot = telebot.TeleBot(TOKEN) 
+
+keyboard_like = telebot.types.InlineKeyboardMarkup()
+button_1 = telebot.types.InlineKeyboardButton('Like', callback_data='continue_like')
+button_2 = telebot.types.InlineKeyboardButton('DisLike', callback_data='continue_dislike')
+keyboard_like.add(button_1, button_2)
+
+
 
 
 keyboard2 = telebot.types.InlineKeyboardMarkup()
@@ -81,61 +88,102 @@ def handle_callback(callback):
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
 
     if callback.data == 'continue_py1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
 
     if callback.data == 'continue_sc':
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
 
     if callback.data == 'continue_sc1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
 
     if callback.data == 'continue_rob':
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
 
     if callback.data == 'continue_rob1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
 
     if callback.data == 'continue_web':
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
 
     if callback.data == 'continue_web1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
 
     if callback.data == 'continue_art':
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')     
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)     
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
 
     if callback.data == 'continue_art1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
         photo_url = ''
         bot.send_photo(callback.message.chat.id, photo_url)
-        bot.answer_callback_query(callback.id, 'фото отправлено')
+        bot.answer_callback_query(callback.id, reply_markup=keyboard_like)
+        if callback.data == 'continue_like':
+            like += 1
+        else:
+            dislike += 1
+
 
 
 print('Сервер запущен.')
