@@ -1,6 +1,6 @@
 import telebot
 
-TOKEN = ''
+TOKEN = '7570041216:AAEjllhAk-aOIXO7AE0kugI2MMbAnCrPi4Q'
 
 bot = telebot.TeleBot(TOKEN) 
 
@@ -79,34 +79,63 @@ def handle_callback(callback):
     
     if callback.data == 'continue_py':
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')
 
     if callback.data == 'continue_py1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')
 
     if callback.data == 'continue_sc':
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')
 
     if callback.data == 'continue_sc1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')
 
     if callback.data == 'continue_rob':
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')
 
     if callback.data == 'continue_rob1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')
 
     if callback.data == 'continue_web':
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')
 
     if callback.data == 'continue_web1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')
 
     if callback.data == 'continue_art':
         bot.send_message(callback.message.chat.id, f"Имя 1:", )
-        
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')     
+
     if callback.data == 'continue_art1':
         bot.send_message(callback.message.chat.id, f"Имя 2:", )
-    
+        photo_url = ''
+        bot.send_photo(callback.message.chat.id, photo_url)
+        bot.answer_callback_query(callback.id, 'фото отправлено')
 
 
 print('Сервер запущен.')
@@ -115,4 +144,3 @@ bot.polling(
     non_stop=True, 
     interval=1
 )
-
