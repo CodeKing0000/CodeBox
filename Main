@@ -1,16 +1,9 @@
 import telebot
 import random
 
-TOKEN = 'token'
+TOKEN = ''
 
 bot = telebot.TeleBot(TOKEN) 
-
-n = 0
-chars = '+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
-nums = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
-a = 0
-start_game = False
-start_calculate = False  
 
 
 keyboard = telebot.types.InlineKeyboardMarkup()
@@ -22,7 +15,7 @@ keyboard.add(button_1, button_2, button_3)
 
 @bot.message_handler(commands=['start'])
 def handle_command_start(message):
-    bot.send_message(message.chat.id, "Привет меня зовут БунтБот! Мои команды:", reply_markup=keyboard)
+    bot.send_message(message.chat.id, "Привет меня зовут LikeBot!")
 
 @bot.message_handler(commands=['help'])
 def handle_command_help(message):
@@ -80,6 +73,4 @@ bot.polling(
     non_stop=True, 
     interval=1
 )
-
-
-    
+   
