@@ -37,11 +37,9 @@ def handle_command_help(message):
 def handle_callback(callback):
     if callback.data == 'continue':
         bot.send_message(callback.message.chat.id, f"Выберите свой курс:", reply_markup=keyboard)
-
-@bot.callback_query_handler(func=lambda callback: True)
-def handle_callback(callback):
     if callback.data == 'gen_pass':
         bot.send_message(callback.message.chat.id, f"Выберите преподавателя:", reply_markup=keyboard2)
+
 
 print('Сервер запущен.')
 
@@ -49,5 +47,4 @@ bot.polling(
     non_stop=True, 
     interval=1
 )
-
 
