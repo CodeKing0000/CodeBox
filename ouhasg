@@ -1,0 +1,26 @@
+{
+    "scretch": {
+        "vlad": {
+            "img": "path_to_png",
+            "fio": "fio",
+            "likes": 0
+        },
+        "fedor": {
+            "img": "path_to_png",
+            "fio": "fio",
+            "likes": 0
+        }
+    },
+    "python": {
+        "vlad": {
+            "img": "path_to_png",
+            "fio": "fio",
+            "likes": 0
+        },
+        "fedor": {
+            "img": "path_to_png",
+            "fio": "fio",
+            "likes": 0
+        }
+    }
+}
