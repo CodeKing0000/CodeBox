@@ -9,16 +9,6 @@ TOKEN = ''
 
 bot = telebot.TeleBot(TOKEN)
 
-like_maks = 0
-like_ilya = 0
-like_vlad = 0
-like_fedor = 0 
-like_irina = 0
-like_marina = 0
-like_andrey = 0
-like_vasilina = 0
-like_aleksey = 0
-
 keyboard_like = telebot.types.InlineKeyboardMarkup()
 button_1 = telebot.types.InlineKeyboardButton('Да', callback_data='continue_like')
 button_2 = telebot.types.InlineKeyboardButton('Нет', callback_data='continue_dislike')
@@ -105,110 +95,110 @@ def handle_callback(callback):
         bot.send_photo(callback.message.chat.id, data['python']['Макс']['img'], data['python']['Макс']['fio'])
         bot.send_message(callback.message.chat.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        like_maks += 1
-        bot.send_message(callback.message.chat.id, f"У него {like_maks} лайков!")
+        data['python']['Макс']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У него {data['python']['Макс']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_maks -= 1
-        bot.send_message(callback.message.chat.id, f"У него {like_maks} лайков!")
+        data['python']['Макс']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У него {data['python']['Макс']['likes']} лайков!")
                          
     elif callback.data == 'continue_py1':
         # Илья
         bot.send_photo(callback.message.chat.id, photo_url, data['python']['Илья']['img'], data['python']['Илья']['fio'])
         bot.send_message(callback.message.chat.id, 'Тебе нравится этот преподаватель?', reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        like_ilya += 1
-        return bot.send_message(callback.message.chat.id, f"У него {like_ilya} лайков!")
+        data['python']['Илья']['likes'] += 1
+        return bot.send_message(callback.message.chat.id, f"У него {data['python']['Илья']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_ilya -= 1
-        bot.send_message(callback.message.chat.id, f"У него {like_ilya} лайков!")
+        data['python']['Илья']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У него {data['python']['Илья']['likes']} лайков!")
 
     elif callback.data == 'continue_sc':
         # Влад
         bot.send_photo(callback.message.chat.id, data['scretch']['Влад']['img'], data['scretch']['Влад']['fio'])
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        like_vlad += 1
-        bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
+        data['scretch']['Влад']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У него {data['scretch']['Влад']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_vlad -= 1
-        bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
+        data['scretch']['Влад']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У него {data['scretch']['Влад']['likes']} лайков!")
 
     elif callback.data == 'continue_sc1':
         # Федор
         bot.send_photo(callback.message.chat.id, data['scretch']['Федор']['img'], data['scretch']['Федор']['fio'])
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        like_fedor += 1
-        bot.send_message(callback.message.chat.id, f"У него {like_fedor} лайков!")
+        data['scretch']['Федор']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У него {data['scretch']['Федор']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_fedor -= 1
-        bot.send_message(callback.message.chat.id, f"У него {like_fedor} лайков!")
+        data['scretch']['Федор']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У него {data['scretch']['Федор']['likes']} лайков!")
 
     elif callback.data == 'continue_rob':
         # Арина
         bot.send_photo(callback.message.chat.id, data['roblox']['Арина']['img'], data['roblox']['Арина']['fio'])
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        like_irina += 1
-        bot.send_message(callback.message.chat.id, f"У нее {like_irina} лайков!")
+        data['roblox']['Арина']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У нее {data['roblox']['Арина']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_irina -= 1
-        bot.send_message(callback.message.chat.id, f"У нее {like_irina} лайков!")
+        data['roblox']['Арина']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У нее {data['roblox']['Арина']['likes']} лайков!")
 
     elif callback.data == 'continue_rob1':
         # Влад
         bot.send_photo(callback.message.chat.id, data['roblox']['Влад']['img'], data['roblox']['Влад']['fio'])
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        like_vlad += 1
-        bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
+        data['roblox']['Влад']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У него {data['roblox']['Влад']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_vlad -= 1
-        bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
+        data['roblox']['Влад']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У него {data['roblox']['Влад']['likes']} лайков!")
 
     elif callback.data == 'continue_web':
         # Марина
         bot.send_photo(callback.message.chat.id, data['web']['Марина']['img'], data['web']['Марина']['fio'])
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        like_marina += 1
-        bot.send_message(callback.message.chat.id, f"У нее {like_marina} лайков!")
+        data['web']['Марина']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У нее {data['web']['Марина']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_marina -= 1
-        bot.send_message(callback.message.chat.id, f"У нее {like_marina} лайков!")
+        data['web']['Марина']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У нее {data['web']['Марина']['likes']} лайков!")
 
     elif callback.data == 'continue_web1':
         # Андрей
         bot.send_photo(callback.message.chat.id, data['web']['Андрей']['img'], data['web']['Андрей']['fio'])
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        like_andrey += 1
-        bot.send_message(callback.message.chat.id, f"У него {like_andrey} лайков!")
+        data['web']['Андрей']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У него {data['web']['Андрей']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_andrey -= 1
-        bot.send_message(callback.message.chat.id, f"У него {like_andrey} лайков!")
+        data['web']['Андрей']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У него {data['web']['Андрей']['likes']} лайков!")
 
     elif callback.data == 'continue_art':
         # Василина
         bot.send_photo(callback.message.chat.id, data['art']['Василина']['img'], data['art']['Василина']['fio'])
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)     
     if callback.data == 'continue_like':
-        like_vasilina += 1
-        bot.send_message(callback.message.chat.id, f"У нее {like_vasilina} лайков!")
+        data['art']['Василина']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У нее {data['art']['Василина']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_vasilina -= 1
-        bot.send_message(callback.message.chat.id, f"У нее {like_vasilina} лайков!")
+        data['art']['Василина']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У нее {data['art']['Василина']['likes']} лайков!")
 
     elif callback.data == 'continue_art1':
         # Алексей
         bot.send_photo(callback.message.chat.id, data['art']['Алексей']['img'], data['art']['Алексей']['fio'])
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        like_aleksey += 1
-        bot.send_message(callback.message.chat.id, f"У него {like_aleksey} лайков!")
+        data['art']['Алексей']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У него {data['art']['Алексей']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        like_aleksey -= 1
-        bot.send_message(callback.message.chat.id, f"У него {like_aleksey} лайков!")
+        data['art']['Алексей']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У него {data['art']['Алексей']['likes']} лайков!")
 
 
 
@@ -218,4 +208,3 @@ bot.polling(
     non_stop=True, 
     interval=1
 )
-
