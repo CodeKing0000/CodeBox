@@ -101,9 +101,10 @@ def handle_callback(callback):
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.message.chat.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
         if callback.data == 'continue_like':
+            print(like_maks)
             like_maks += 1
             bot.send_message(callback.message.chat.id, f"У него {like_maks} лайков!")
-        if callback.data == 'continue_dislike':
+        else:
             like_maks -= 1
             bot.send_message(callback.message.chat.id, f"У него {like_maks} лайков!")
                          
