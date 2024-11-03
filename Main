@@ -103,7 +103,7 @@ def handle_callback(callback):
                          
     elif callback.data == 'continue_py1':
         # Илья
-        bot.send_photo(callback.message.chat.id, photo_url, data['python']['Илья']['img'], data['python']['Илья']['fio'])
+        bot.send_photo(callback.message.chat.id, data['python']['Илья']['img'], data['python']['Илья']['fio'])
         bot.send_message(callback.message.chat.id, 'Тебе нравится этот преподаватель?', reply_markup=keyboard_like)
     if callback.data == 'continue_like':
         data['python']['Илья']['likes'] += 1
@@ -147,14 +147,14 @@ def handle_callback(callback):
 
     elif callback.data == 'continue_rob1':
         # Влад
-        bot.send_photo(callback.message.chat.id, data['roblox']['Влад']['img'], data['roblox']['Влад']['fio'])
+        bot.send_photo(callback.message.chat.id, data['roblox']['Влад1']['img'], data['roblox']['Влад1']['fio'])
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
     if callback.data == 'continue_like':
-        data['roblox']['Влад']['likes'] += 1
-        bot.send_message(callback.message.chat.id, f"У него {data['roblox']['Влад']['likes']} лайков!")
+        data['roblox']['Влад1']['likes'] += 1
+        bot.send_message(callback.message.chat.id, f"У него {data['roblox']['Влад1']['likes']} лайков!")
     if callback.data == 'continue_dislike':
-        data['roblox']['Влад']['likes'] -= 1
-        bot.send_message(callback.message.chat.id, f"У него {data['roblox']['Влад']['likes']} лайков!")
+        data['roblox']['Влад1']['likes'] -= 1
+        bot.send_message(callback.message.chat.id, f"У него {data['roblox']['Влад1']['likes']} лайков!")
 
     elif callback.data == 'continue_web':
         # Марина
