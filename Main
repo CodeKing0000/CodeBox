@@ -100,121 +100,120 @@ def handle_callback(callback):
         photo_url = 'https://static.tildacdn.com/tild6462-3231-4663-a339-336233383030/noroot.png'
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.message.chat.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
-        if callback.data == 'continue_like':
-            print(like_maks)
-            like_maks += 1
-            bot.send_message(callback.message.chat.id, f"У него {like_maks} лайков!")
-        else:
-            like_maks -= 1
-            bot.send_message(callback.message.chat.id, f"У него {like_maks} лайков!")
+    if callback.data == 'continue_like':
+        like_maks += 1
+        bot.send_message(callback.message.chat.id, f"У него {like_maks} лайков!")
+    if callback.data == 'continue_dislike':
+        like_maks -= 1
+        bot.send_message(callback.message.chat.id, f"У него {like_maks} лайков!")
                          
     if callback.data == 'continue_py1':
         # Илья
         photo_url = 'https://static.tildacdn.com/tild3633-3935-4239-b964-666630303766/IMG_4665.jpeg'
-        bot.send_photo(callback.message.chat.id, photo_url)
-        bot.send_message(callback.message.chat.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
-        if callback.data == 'continue_like':
-            like_ilya += 1
-            bot.send_message(callback.message.chat.id, f"У него {like_ilya} лайков!")
-        else:
-            like_ilya -= 1
-            bot.send_message(callback.message.chat.id, f"У него {like_ilya} лайков!")
+        bot.send_photo(callback.message.chat.id, photo_url, 'Илья Козлобродов - преподаватель программирования и разработки сайтов. Обучает детей более 3 лет.')
+        bot.send_message(callback.message.chat.id, 'Тебе нравится этот преподаватель?', reply_markup=keyboard_like)
+    if callback.data == 'continue_like':
+        like_ilya += 1
+        bot.send_message(callback.message.chat.id, f"У него {like_ilya} лайков!")
+    if callback.data == 'continue_dislike':
+        like_ilya -= 1
+        bot.send_message(callback.message.chat.id, f"У него {like_ilya} лайков!")
 
     if callback.data == 'continue_sc':
         # Влад
         photo_url = 'https://static.tildacdn.com/tild6632-3336-4635-b335-356238613835/noroot.png'
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
-        if callback.data == 'continue_like':
-            like_vlad += 1
-            bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
-        else:
-            like_vlad -= 1
-            bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
+    if callback.data == 'continue_like':
+        like_vlad += 1
+        bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
+    if callback.data == 'continue_dislike':
+        like_vlad -= 1
+        bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
 
     if callback.data == 'continue_sc1':
         # Федор
         photo_url = 'https://static.tildacdn.com/tild3234-3832-4665-a261-343263353035/_.jpeg'
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
-        if callback.data == 'continue_like':
-            like_fedor += 1
-            bot.send_message(callback.message.chat.id, f"У него {like_fedor} лайков!")
-        else:
-            like_fedor -= 1
-            bot.send_message(callback.message.chat.id, f"У него {like_fedor} лайков!")
+    if callback.data == 'continue_like':
+        like_fedor += 1
+        bot.send_message(callback.message.chat.id, f"У него {like_fedor} лайков!")
+    if callback.data == 'continue_dislike':
+        like_fedor -= 1
+        bot.send_message(callback.message.chat.id, f"У него {like_fedor} лайков!")
 
     if callback.data == 'continue_rob':
         # Ирина
         photo_url = 'https://static.tildacdn.com/tild3061-3536-4061-a330-376565363731/_.jpg'
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
-        if callback.data == 'continue_like':
-            like_irina += 1
-            bot.send_message(callback.message.chat.id, f"У нее {like_irina} лайков!")
-        else:
-            like_irina -= 1
-            bot.send_message(callback.message.chat.id, f"У нее {like_irina} лайков!")
+    if callback.data == 'continue_like':
+        like_irina += 1
+        bot.send_message(callback.message.chat.id, f"У нее {like_irina} лайков!")
+    if callback.data == 'continue_dislike':
+        like_irina -= 1
+        bot.send_message(callback.message.chat.id, f"У нее {like_irina} лайков!")
 
     if callback.data == 'continue_rob1':
         # Влад
         photo_url = 'https://static.tildacdn.com/tild6632-3336-4635-b335-356238613835/noroot.png'
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
-        if callback.data == 'continue_like':
-            like_vlad += 1
-            bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
-        else:
-            like_vlad -= 1
-            bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
+    if callback.data == 'continue_like':
+        like_vlad += 1
+        bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
+    if callback.data == 'continue_dislike':
+        like_vlad -= 1
+        bot.send_message(callback.message.chat.id, f"У него {like_vlad} лайков!")
 
     if callback.data == 'continue_web':
         # Марина
         photo_url = 'https://static.tildacdn.com/tild3333-3564-4438-b036-326338643266/_2.jpeg'
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
-        if callback.data == 'continue_like':
-            like_marina += 1
-            bot.send_message(callback.message.chat.id, f"У нее {like_marina} лайков!")
-        else:
-            like_marina -= 1
-            bot.send_message(callback.message.chat.id, f"У нее {like_marina} лайков!")
+    if callback.data == 'continue_like':
+        like_marina += 1
+        bot.send_message(callback.message.chat.id, f"У нее {like_marina} лайков!")
+    if callback.data == 'continue_dislike':
+        like_marina -= 1
+        bot.send_message(callback.message.chat.id, f"У нее {like_marina} лайков!")
 
     if callback.data == 'continue_web1':
         # Андрей
         photo_url = 'https://static.tildacdn.com/tild3239-3331-4139-a665-633731323531/noroot.png'
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
-        if callback.data == 'continue_like':
-            like_andrey += 1
-            bot.send_message(callback.message.chat.id, f"У него {like_andrey} лайков!")
-        else:
-            like_andrey -= 1
-            bot.send_message(callback.message.chat.id, f"У него {like_andrey} лайков!")
+    if callback.data == 'continue_like':
+        like_andrey += 1
+        bot.send_message(callback.message.chat.id, f"У него {like_andrey} лайков!")
+    if callback.data == 'continue_dislike':
+        like_andrey -= 1
+        bot.send_message(callback.message.chat.id, f"У него {like_andrey} лайков!")
 
     if callback.data == 'continue_art':
         # Василина
         photo_url = 'https://static.tildacdn.com/tild3061-3536-4061-a330-376565363731/_.jpg'
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)     
-        if callback.data == 'continue_like':
-            like_vasilina += 1
-            bot.send_message(callback.message.chat.id, f"У нее {like_vasilina} лайков!")
-        else:
-            like_vasilina -= 1
-            bot.send_message(callback.message.chat.id, f"У нее {like_vasilina} лайков!")
+    if callback.data == 'continue_like':
+        like_vasilina += 1
+        bot.send_message(callback.message.chat.id, f"У нее {like_vasilina} лайков!")
+    if callback.data == 'continue_dislike':
+        like_vasilina -= 1
+        bot.send_message(callback.message.chat.id, f"У нее {like_vasilina} лайков!")
 
     if callback.data == 'continue_art1':
         # Алексей
         photo_url = 'https://static.tildacdn.com/tild6661-3734-4431-b361-616465316634/_.jpeg'
         bot.send_photo(callback.message.chat.id, photo_url)
         bot.send_message(callback.id, "Тебе нравится этот преподаватель?", reply_markup=keyboard_like)
-        if callback.data == 'continue_like':
-            like_aleksey += 1
-            bot.send_message(callback.message.chat.id, f"У него {like_aleksey} лайков!")
-        else:
-            like_aleksey -= 1
-            bot.send_message(callback.message.chat.id, f"У него {like_aleksey} лайков!")
+    if callback.data == 'continue_like':
+        like_aleksey += 1
+        bot.send_message(callback.message.chat.id, f"У него {like_aleksey} лайков!")
+    if callback.data == 'continue_dislike':
+        like_aleksey -= 1
+        bot.send_message(callback.message.chat.id, f"У него {like_aleksey} лайков!")
 
 
 
